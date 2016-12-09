@@ -17,14 +17,23 @@ namespace WebApplication1
         {
             if(!Page.IsPostBack)
             {
+                //Code Commented by TRM as on 9th Dec 2016
+                //var appSettings = ConfigurationManager.AppSettings;
+                //string weatherAppCredentials = appSettings["FilePath"];
+                //SerializationEntity lobjSerializationEntity = new SerializationEntity();
+                //lobjSerializationEntity.FileExtension = "XML";
+                //lobjSerializationEntity.FilePath = weatherAppCredentials;//@"C:\Users\tharu.raju.melath\CloudUtilityFiles\XMLFinal\XMLFinal\WTM";
+                //WeatherApp.Library.Entities.WeatherAppEntityFromXML lobjWappCredentials = XMLSerializationHelper<WeatherAppEntityFromXML>.DeserializeFromXmlFile(lobjSerializationEntity);
+                //Session["WeatherAppEntityFromXML"] = lobjWappCredentials;
+
                 var appSettings = ConfigurationManager.AppSettings;
-                string weatherAppCredentials = appSettings["FilePath"];
+                string FileName = appSettings["FileName"];
                 SerializationEntity lobjSerializationEntity = new SerializationEntity();
                 lobjSerializationEntity.FileExtension = "XML";
-                lobjSerializationEntity.FilePath = weatherAppCredentials;//@"C:\Users\tharu.raju.melath\CloudUtilityFiles\XMLFinal\XMLFinal\WTM";
+                lobjSerializationEntity.FilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FileName);//@"C:\Users\tharu.raju.melath\CloudUtilityFiles\XMLFinal\XMLFinal\WTM";System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
                 WeatherApp.Library.Entities.WeatherAppEntityFromXML lobjWappCredentials = XMLSerializationHelper<WeatherAppEntityFromXML>.DeserializeFromXmlFile(lobjSerializationEntity);
                 Session["WeatherAppEntityFromXML"] = lobjWappCredentials;
-            }
+            } 
         }
 
         protected void kdav_Click(object sender, EventArgs e)
