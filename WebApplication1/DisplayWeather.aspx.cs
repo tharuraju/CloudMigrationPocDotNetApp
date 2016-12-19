@@ -67,5 +67,10 @@ namespace WebApplication1
             lblTemperatureStatus.Text = TemperatureStatus;
 
         }
+
+        protected void lnkAddNewUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WebForm1.aspx");
+        }
     }
 }

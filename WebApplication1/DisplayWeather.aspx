@@ -50,6 +50,7 @@
                         <asp:ListItem value="D">Delhi</asp:ListItem>
                 </asp:DropDownList>
         </div> 
+        <asp:LinkButton ID ="lnkAddNewUser" runat ="server" Text ="Add New User" OnClick="lnkAddNewUser_Click"></asp:LinkButton>
     </div> 
          
     <div style="clear:both;margin-top:20px">
