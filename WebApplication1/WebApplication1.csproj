@@ -66,6 +66,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddOrModifyUsers.aspx" />
     <Content Include="Css\WeatherAppCss.css" />
     <Content Include="DisplayWeather.aspx" />
     <Content Include="Global.asax" />
@@ -76,6 +77,13 @@
     <Content Include="XML\WEATHERAPP-CREDENTIALS.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddOrModifyUsers.aspx.cs">
+      <DependentUpon>AddOrModifyUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddOrModifyUsers.aspx.designer.cs">
+      <DependentUpon>AddOrModifyUsers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DisplayWeather.aspx.cs">
       <DependentUpon>DisplayWeather.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
